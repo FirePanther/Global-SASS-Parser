@@ -21,17 +21,20 @@ Put the directory into the sassparser directory, should look like this: .../sass
 You have to embed the scss file directly into your HTML:
 
 ```html
-<link rel="stylesheet" href="assets/css/style.scss">```
+<link rel="stylesheet" href="assets/css/style.scss">
+```
 
 The SASS Parser creates a css file from the sass file. You could toggle a boolean developer variable or constant to quickly change between css and scss:
 
 ```php
-<link rel="stylesheet" href="assets/css/style.<?= $dev ? 's' : '' ?>css">```
+<link rel="stylesheet" href="assets/css/style.<?= $dev ? 's' : '' ?>css">
+```
 
 Or even more dynamic:
 
 ```php
-<link rel="stylesheet" href="assets/css/style.<?= filemtime('assets/css/style.css') < filemtime('assets/css/style.scss') ? 's' : '' ?>css">```
+<link rel="stylesheet" href="assets/css/style.<?= filemtime('assets/css/style.css') < filemtime('assets/css/style.scss') ? 's' : '' ?>css">
+```
 
 But you don't have to :) you just can embed the .scss file, the SASS Parser is very fast and doesn't compile again if it doesn't need to.
 
