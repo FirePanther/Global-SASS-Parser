@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule \.scss$ lib/sassparser/sassparser.php?pw=my-password [QSA,L]
